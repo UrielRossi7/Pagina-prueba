@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar Música de YouTube</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      margin: 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Descargar Música de YouTube</h1>
+  <p>Introduce el enlace del video de YouTube para descargar la música:</p>
+  <input type="text" id="youtubeUrl" placeholder="Pega aquí el enlace de YouTube">
+  <button onclick="downloadMusic()">Descargar MP3</button>
+  <div id="result"></div>
+
+  <script>
+    async function downloadMusic() {
+      const url = document.getElementById('youtubeUrl').value;
+      const resultDiv = document.getElementById('result');
+
+      if (!url) {
+        resultDiv.innerHTML = '<p style="color: red;">Por favor, introduce un enlace válido.</p>';
+        return;
+      }
+
+      try {
+        const response = await fetch('https://tu-backend.herokuapp.com/download', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          resultDiv.innerHTML = `<a href="${data.downloadUrl}" download>Haz clic aquí para descargar el MP3</a>`;
+        } else {
+          throw new Error('Error al descargar el archivo');
+        }
+      } catch (error) {
+        resultDiv.innerHTML = `<p style="color: red;">${error.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
