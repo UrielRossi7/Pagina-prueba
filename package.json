@@ -1,0 +1,13 @@
+{
+  "name": "youtube-downloader-backend",
+  "version": "1.0.0",
+  "description": "Backend para descargar música de YouTube",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
