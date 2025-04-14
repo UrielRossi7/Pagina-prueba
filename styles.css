@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url(fondo.png);
+}
+
+header {
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.menu a{
+    text-decoration: none; 
+    color: black; 
+    font-size: 30px;
+}
+.menu a:hover{
+    color: #fff;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+section {
+    background-color: #fff;
+    width: 950px;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    margin-left: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+    background: #fff;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.container table{
+    background-color: white;
+}
+
+.container h3{
+    background-color: #ff0000;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container p{
+    color: #fff;
+}
+
+button{
+    padding: 15px 35px;
+    background-color: #ff0000;
+    color: black;
+    transition: 1s;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover{
+    background: #000000;
+    transition: 1s;
+    color: #ff0000;
+    border-radius: 15px;
+}
+
+/*Medios de Pago*/
+
+.containerMP {
+    margin-top: 20px;
+    background: #fff;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+.containerMP a{
+    text-decoration: none;
+    color: #ff0000;
+}
+
+/*FORMULARIO*/
+
+.form-container{
+    margin-top: 20px;
+    background: #fff;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+.form-container input{
+    background: transparent;
+    border-bottom: 2px solid #ff0000;
+    border-right: none;
+    color: #fff;
+    font-size: 17px;
+    outline: none;
+    line-height: 45px;
+    transition: all 1s;
+    border-radius: 20px;
+}
+
+.form-container input:focus{
+    box-shadow: 0 0 5px #cf0000;
+}
+
+
+.form-container textarea:focus{
+    box-shadow: 0 0 5px #cf0000;
+}
+
+.form-container button:hover{
+    background: #272727;
+    transition: 1s;
+    color: #ff0000;
+    border-radius: 15px;
+}
+
+/*PARA LOS SELECT*/
+
+.Tplan{
+    background: #fff;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+.Tplan1{
+    background: #fff;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+.Tplan2{
+    background: #fff;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+.Tplan3{
+    background: #fff;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+
+
+.form-container1{
+    margin-top: 20px;
+    background: #fff;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: none;
+}
+
+.form-container1 input{
+    background: transparent;
+    border-bottom: 2px solid #ff0000;
+    border-right: none;
+    color: #fff;
+    font-size: 17px;
+    outline: none;
+    line-height: 45px;
+    transition: all 1s;
+    border-radius: 20px;
+}
+
+.form-container1 input:focus{
+    box-shadow: 0 0 5px #cf0000;
+}
+
+
+.form-container1 textarea:focus{
+    box-shadow: 0 0 5px #cf0000;
+}
+
+.form-container1 button:hover{
+    background: #272727;
+    transition: 1s;
+    color: #ff0000;
+    border-radius: 15px;
+}
+
+.form-container1 textarea{
+    background: transparent;
+    border-bottom: 2px solid #ff0000;
+    border-right: none;
+    color: #fff;
+    font-size: 17px;
+    outline: none;
+    line-height: 45px;
+    transition: all 1s;
+    border-radius: 20px;
+}
+
+footer{
+    background-color: #000000;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+footer img {
+    padding-left: 20px;
+}
+
+.menuFooter{
+    padding: 0;
+    text-align: center;
+}
+
+.menuFooter a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.menuFooter a:hover{
+    cursor: pointer;
+    color: red;
+}
+
+iframe {
+    padding-right: 60px;
+    float: right;
+}

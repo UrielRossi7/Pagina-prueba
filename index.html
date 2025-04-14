@@ -1,84 +1,330 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descargar Música de YouTube</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    input[type="text"] {
-      width: 70%;
-      padding: 10px;
-      margin: 15px 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #result {
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <link rel="icon" href="newells.ico.ico">
+    <title>Newell's Old Boys</title>
 </head>
 <body>
-  <h1>Descargar Música de YouTube</h1>
-  <p>Introduce el enlace del video de YouTube para descargar la música:</p>
-  <input type="text" id="youtubeUrl" placeholder="Pega aquí el enlace de YouTube">
-  <button onclick="downloadMusic()">Descargar MP3</button>
-  <div id="result"></div>
 
-  <script>
-    async function downloadMusic() {
-      const url = document.getElementById('youtubeUrl').value;
-      const resultDiv = document.getElementById('result');
+    <!-- Comentario HTML: Parte Superior (Titulo) -->
+    <header>
+        <h1 class="special-gothic-expanded-one-regular">Hacete Socio</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#metodoPago">Medios de Pagos</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+                <li><a href="#atencion">Atención al Socio</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      if (!url) {
-        resultDiv.innerHTML = '<p style="color: red;">Por favor, introduce un enlace válido.</p>';
-        return;
-      }
+    <!-- Comentario HTML: Cuerpo  -->
+    <section>
+        <h2> <strong> <font color="red">Si querés ser socio</font> de Newell's Old Boys </strong></h2>
 
-      const response = await fetch('https://youtube-downloader-backend.onrender.com/download', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ url })
-      });
+        <!-- Comentario HTML: Botón + Tabla con los Planes  -->
+        <div class="planes" id="planes">
+            <button onclick="Planes()"><strong>Ver Planes</strong></button>
+            <div class="container" id="container">
+                <table border="2">
+                <h3>MAYORES DE 18 AÑOS | cuota mensual</h3>
+                    <tr>
+                    <th>Plan</th>
+                    <th>Beneficios</th>
+                    <th>Precio</th>
+                    </tr>
+                    <tr>
+                    <td>SOCIO PLENO</td>
+                    <td>- Acceso a tribunas generales los días de partido.<br>
+                        - Entradas con descuento o abonos para la Liga Profesional.<br>
+                        - Prioridad y descuentos para partidos de Copa y otros eventos.<br>
+                        - Acceso a instalaciones del club.<br>
+                        - Posibilidad de realizar deportes y actividades.<br>
+                        - Descuentos en la Tienda Newell’s.<br>
+                        - Participación en sorteos y beneficios.</td>
+                    <td>$21.200</td>
+                    </tr>
+                    <tr>
+                    <td>SOCIO FÚTBOL</td>
+                    <td>Acceso a las tribunas generales los días de partido, 
+                        posibilidad de adquirir entradas con descuento para socios o abonos para los partidos del torneo de la Liga Profesional de Fútbol, 
+                        descuentos y prioridad para la compra de entradas de Copa y otros eventos, sorteos y beneficios.</td>
+                    <td>$19.700</td>
+                    </tr>
+                    <tr>
+                        <td>SOCIO DEPORTIVO</td>
+                        <td>Acceso a las instalaciones del club, posibilidad de realizar deportes y actividades, sorteos y beneficios.</td>
+                        <td>$19.700</td>
+                    </tr>
+                    <table border="2">
+                    <h3>MENORES DE 18 AÑOS | cuota mensual</h3>
+                        <tr>
+                        <th>Plan</th>
+                        <th>Edad</th>
+                        <th>Precio</th>
+                        </tr>
+                        <tr>
+                        <td>CADETE PLENO</td>
+                        <td>de 12 a 17 años inclusive</td>
+                        <td>$15.000</td>
+                        </tr>
+                        <tr>
+                        <td>MENOR PLENO</td>
+                        <td>de 7 a 11 años inclusive</td>
+                        <td>$10.800</td>
+                        </tr>
+                        <tr>
+                            <td>INFANTIL PLENO</td>
+                            <td>de 0 a 6 años inclusive</td>
+                            <td>Abona únicamente el valor del carnet: $4.500</td>
+                        </tr>
+                            
+                    </table>
+                    <table border="2">
+                        <h3>SOCIO FILIAL | cuota mensual</h3>
+                            <tr>
+                            <th>Plan</th>
+                            <th>Ubicación</th>
+                            <th>Precio</th>
+                            </tr>
+                            <tr>
+                            <td>FILIAL I</td>
+                            <td>hasta 40 km</td>
+                            <td>$19.700</td>
+                            </tr>
+                            <tr>
+                            <td>MENOR FILIAL I</td>
+                            <td>hasta 40 km</td>
+                            <td>$8.800</td>
+                            </tr>
+                            <tr>
+                                <td>FILIAL II</td>
+                                <td>más de 40 km</td>
+                                <td>$12.300</td>
+                            </tr>
+                            <tr>
+                                <td>MENOR FILIAL II</td>
+                                <td>más de 40 km</td>
+                                <td>$6.200</td>
+                            </tr>
+                            <tr>
+                                <td>FILIAL INTERNACIONAL</td>
+                                <td>Fuera del país</td>
+                                <td>$15.000</td>
+                            </tr>
+                                <p>Acceso a las tribunas generales los días de partido, 
+                                    posibilidad de adquirir entradas con descuento para socios o abonos para los partidos del torneo de la Liga Profesional de Fútbol descuentos y prioridad para la compra de entradas de Copa y otros eventos, 
+                                    cuatro accesos mensuales a las instalaciones del club, descuentos especiales en la Tienda Newell’s, sorteos y beneficios.</p>
+                        </table>
+                        <table border="2">
+                            <h3>GRUPO FAMILIAR | cuota mensual</h3>
+                                <tr>
+                                <th>Plan</th>
+                                <th>Descuento</th>
+                                </tr>
+                                <tr>
+                                <td><strong>2 ADULTOS</strong> (pareja) y mínimo <strong>2 MENORES</strong> entre 7 y 17 años</td>
+                                <td>30% de DESCUENTO</td>
+                                </tr>
+                                <tr>
+                                <td><strong>1 ADULTO</strong> y <strong>3 MENORES</strong> o más entre 7 y 17 años</td>
+                                <td>30% de DESCUENTO</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2 ADULTOS</strong> (pareja) y <strong>1 MENOR</strong> entre 7 y 17 años</td>
+                                    <td>20% de DESCUENTO</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1 ADULTO</strong> y <strong>2 MENORES</strong> de entre 7 y 17 años</td>
+                                    <td>20% de DESCUENTO</td>
+                                </tr>
+                                    
+                            </table>
+                </table>
+            </div>
+        </div>
+        <!-- Comentario HTML: Medios de Pago -->
+        <h2> <strong><font color="red">Medios</font> de pago</strong></h2>
+        <button onclick="MPagos()" class="metodoPago" id="metodoPago"><strong>Ver Medios de Pago</strong></button>
+        <div class="containerMP" id="containerMP">
+            <p><strong>EN OFICINA DE ATENCIÓN AL SOCIO:</strong>  Pago en efectivo, con tarjetas de débito y crédito. 
+                Trabaja en la sede del Parque Independencia de lunes a viernes de 9 a 20 y sábados de 9 a 13, 
+                como así también en la subsede de la Escuela de fútbol infantil Malvinas Argentinas ubicada en Zeballos 3185.</p>
+                <br>
+                <p><strong>DÉBITO AUTOMÁTICO:</strong> Para los usuarios de las tarjetas MasterCard, 
+                    VISA crédito o débito, Cabal crédito y Naranja. 
+                    Previamente, deben realizar el trámite que los habilite. 
+                    Se descuenta a mes adelantado y posee un 10% de descuento sobre la cuota social.
+                    <br><br>
+                    Realizá el trámite online desde <a href="https://login.newellspass.com/" target="_blank">newellspass.com</a> </p>
+                <br>
+                <p><strong>RAPIPAGO Y PAGOFÁCIL:</strong>  Abonando en cualquier sucursal del país, 
+                    únicamente cuota del mes en curso (no atrasadas ni adelantadas). 
+                    El carnet estará habilitado al cabo de 48 a 72 horas hábiles de realizado el pago. 
+                    Se abona indicando al operador el número de socio y el importe correspondiente a la categoría. 
+                    Se recomienda cotejar la exactitud de los datos impresos en el ticket.</p>
+                <br>
+                <p><strong>PAGO MIS CUENTAS:</strong> se puede abonar la cuota únicamente del mes en curso (no atrasadas ni adelantadas) desde la página web
+                    <a href="https://pagomiscuentas.com/" target="_blank"> www.pagomiscuentas.com</a> o desde el Home Banking de la cuenta bancaria personal. 
+                    Vale destacar que la acreditación del pago por estos medios electrónicos suele efectuarse entre 48 y 72 horas de realizado el trámite.</p>
+                <br>
+                <p><strong>COBRADOR A DOMICILIO:</strong> Solicitando el servicio en la oficina de <a href="#atencion">Atención al Socio.</a></p>
+        </div>
 
-      
-      try {
-        const response = await fetch('https://tu-backend.herokuapp.com/download', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url })
-        });
+        <!-- Comentario HTML: Formulario para nuevos socios -->
+        <h2> <strong><font color="red">Formulario par</font>a nuevos socios</strong></h2>
+        <button onclick="Formulario()" class="metodoPago" id="formulario"><strong>Realizar Formulario</strong></button>
+        <div class="form-container" id="form-container">
+            <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+    
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+    
+            <label for="edad">Edad:</label>
+            <input onclick="edad()" type="number" id="edad" name="edad" required min="0" max="100"><br><br>
 
-        if (response.ok) {
-          const data = await response.json();
-          resultDiv.innerHTML = `<a href="${data.downloadUrl}" download>Haz clic aquí para descargar el MP3</a>`;
-        } else {
-          throw new Error('Error al descargar el archivo');
-        }
-      } catch (error) {
-        resultDiv.innerHTML = `<p style="color: red;">${error.message}</p>`;
-      }
-    }
-  </script>
+            <p>Elegí tu plan:</p>
+            <input onclick="Mayores()" type="radio" id="mayores" name="plan" value="mayores">
+            <label for="mayores">Mayores de 18 años</label>
+            <select name="Tplan" id="Tplan" class="Tplan" style="display: none;">
+                <option value="1">SOCIO PLENO</option>
+                <option value="2">SOCIO FÚTBOL</option>
+                <option value="3">SOCIO DEPORTIVO</option>
+            </select>
+
+            <input onclick="Menores()" type="radio" id="menores" name="plan" value="menores">
+            <label for="menores">Menores de 18 años</label>
+            <select name="Tplan1" id="Tplan1" class="Tplan1">
+                <option value="1">CADETE PLENO</option>
+                <option value="2">MENOR PLENO</option>
+                <option value="3">INFANTIL PLENO</option>
+            </select>
+
+            <input onclick="Filial()" type="radio" id="filial" name="plan" value="filial">
+            <label for="filial">Socio Filial</label>
+            <select name="Tplan2" id="Tplan2" class="Tplan2">
+                <option value="1">FILIAL I</option>
+                <option value="2">MENOR FILIAL I</option>
+                <option value="3">FILIAL II</option>
+                <option value="4">MENOR FILIAL II</option>
+                <option value="5">FILIAL INTERNACIONAL</option>
+            </select>
+
+            <input onclick="Grupo()" type="radio" id="grupo" name="plan" value="grupo">
+            <label for="grupo">Grupo Familiar</label>
+            <select name="Tplan3" id="Tplan3" class="Tplan3">
+                <option value="1">2 ADULTOS y 2 MENORES</option>
+                <option value="2">1 ADULTO y 3 MENORES</option>
+                <option value="3">2 ADULTOS y 1 MENOR</option>
+                <option value="4">1 ADULTO y 2 MENORES</option>
+            </select>
+
+            <br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="cuotas">Cantidad de cuotas:</label>
+            <input type="number" id="cuotas" name="cuotas" max="12" min="1"  required><br><br>
+    
+            <input placeholder="Provincia" list="provincia1">
+            <datalist id="provincia1">
+                <option value="b">Buenos Aires</option>
+                <option value="ca">Catamarca</option>
+                <option value="ch">Chaco</option>
+                <option value="chu">Chubut</option>
+                <option value="c">Córdoba</option>
+                <option value="cor">Corrientes</option>
+                <option value="e">Entre Ríos</option>
+                <option value="f">Formosa</option>
+                <option value="j">Jujuy</option>
+                <option value="lp">La Pampa</option>
+                <option value="lr">La Rioja</option>
+                <option value="m">Mendoza</option>
+                <option value="mi">Misiones</option>
+                <option value="n">Neuquén</option>
+                <option value="r">Rio Negro</option>
+                <option value="sa">Salta</option>
+                <option value="sj">San Juan</option>
+                <option value="sl">San Luis</option>
+                <option value="sc">Santa Cruz</option>
+                <option value="s">Santa Fe</option>
+                <option value="se">Santiago del Estero</option>
+                <option value="tf">Tierra del Fuego</option>
+                <option value="t">Tucumán</option>
+            </datalist>
+
+<br><br>
+    
+            <label>
+                <input type="checkbox" name="estudiante"> Soy estudiante (Obtenes otros beneficios enviados vía mail)
+            </label><br><br>
+    
+            <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Comentario HTML: Atención al Socio -->
+        <div class="atencion">
+            <h2 id="atencion"><strong><font color="red">Para consultas podes acercarte a</font> la oficina de antención al socio</strong></h2>
+            <ul><strong>Ubicación:</strong> Estadio Coloso Marcelo Bielsa (Parque Independencia) - Predio Malvinas (Zeballos 3185)</ul>
+            <ul><strong>Horarios de Atención:</strong> Lunes a Viernes de 9 a 20 hs - Sábados de 9 a 13 hs</ul>
+            <ul><strong>Teléfono: +543412718171</strong></ul>
+            <ul><strong>Whatsapp: 341 374-0413</strong></ul>
+        </div>
+
+        <h2><strong><font color="red">O bien, podes completar</font> el siguiente formulario</strong></h2>
+
+        <button onclick="formc()" class="formularioc"><strong>Realizar Consulta</strong></button>
+        <div class="form-container1" id="form-container1">
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+    
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+
+    </section>
+
+
+
+    <!-- Comentario HTML: Footer -->
+
+    <footer>
+        <img src="logofooter.png">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.8073494959503!2d-60.66403422355657!3d-32.956095373589235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab6f11537faf%3A0xa99bea6006b75b6a!2sEstadio%20Marcelo%20Bielsa!5e0!3m2!1ses!2sar!4v1744664334105!5m2!1ses!2sar" width="350" height="200" style="border:0; padding-left: 60px; text-align: right;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <nav class="menuFooter">
+            <ul>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#metodoPago">Medios de Pagos</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+                <li><a href="#atencion">Atención al Socio</a></li>
+            </ul>
+        </nav>
+
+    </footer>
 </body>
 </html>
